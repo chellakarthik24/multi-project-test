@@ -1,0 +1,5 @@
+rootProject.name = 'multi-project-test'
+
+include 'multi-project-boot'
+include 'multi-project-main'
+include 'multi-project-infrastructure'

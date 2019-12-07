@@ -1,0 +1,17 @@
+plugins {
+    id "org.springframework.boot"
+}
+
+configurations {
+	developmentOnly
+	runtimeClasspath {
+		extendsFrom developmentOnly
+	}
+}
+
+dependencies {
+    implementation project(':multi-project-infrastructure')
+    runtimeOnly project(':multi-project-main')
+    implementation('org.springframework.boot:spring-boot-starter-web')
+    runtimeOnly 'org.seasar.doma.boot:doma-spring-boot-starter:1.2.1'
+}
