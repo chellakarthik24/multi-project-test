@@ -9,6 +9,8 @@ configurations {
 	}
 }
 
+jar.enabled = true
+
 dependencies {
     implementation project(':multi-project-infrastructure')
     runtimeOnly project(':multi-project-main')

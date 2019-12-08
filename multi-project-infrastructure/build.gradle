@@ -20,6 +20,7 @@ compileTestJava {
 
 dependencies {
     implementation project(':multi-project-main')
+    testImplementation project(':multi-project-boot')
     implementation('org.springframework.boot:spring-boot-starter')
 
     implementation 'org.mariadb.jdbc:mariadb-java-client:2.5.1'
