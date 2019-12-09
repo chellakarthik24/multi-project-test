@@ -1,6 +1,6 @@
 package com.example.multiprojectmain.infrastructure.persistence.repository.message;
 
-import com.example.multiprojectmain.MultiProjectMainApplication;
+import com.example.multiprojectmain.TestInfrastructureApplication;
 import com.example.multiprojectmain.domain.message.Message;
 import com.example.multiprojectmain.domain.message.MessageRepository;
 import org.junit.jupiter.api.AfterEach;
@@ -14,7 +14,7 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@SpringBootTest(classes = MultiProjectMainApplication.class)
+@SpringBootTest(classes = TestInfrastructureApplication.class)
 class MessageRepositoryImplTest {
 
     @Resource

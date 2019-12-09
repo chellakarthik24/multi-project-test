@@ -9,11 +9,18 @@ configurations {
 	}
 }
 
-jar.enabled = true
+jar {
+    manifest {
+        attributes 'Main-Class': 'MultiProjectMainApplication'
+    }
+}
 
 dependencies {
     implementation project(':multi-project-infrastructure')
     runtimeOnly project(':multi-project-main')
     implementation('org.springframework.boot:spring-boot-starter-web')
     runtimeOnly 'org.seasar.doma.boot:doma-spring-boot-starter:1.2.1'
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
 }

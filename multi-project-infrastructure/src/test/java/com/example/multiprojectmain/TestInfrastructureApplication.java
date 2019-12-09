@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MultiProjectMainApplication {
+public class TestInfrastructureApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MultiProjectMainApplication.class, args);
+        SpringApplication.run(TestInfrastructureApplication.class, args);
     }
 
 }
