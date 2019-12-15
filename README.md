@@ -50,13 +50,13 @@
 上記ファクトリクラスを利用するリポジトリ実装クラスやクエリサービス実装クラスを配置。
 
 ### `multi-project-main`モジュール
-#### application
+#### applicationパッケージ
 アプリケーション層のアプリケーションサービスクラスおよびクエリサービスインタフェースを配置。
 
-#### domain
+#### domainパッケージ
 ドメイン層のドメインクラスおよびリポジトリインタフェースを配置。
 
-#### presentation
+#### presentationパッケージ
 プレゼンテーション層のコントローラなどを配置。
 
 ## Gradle設定
@@ -68,17 +68,18 @@
 
 # ビルド依存関係
 ## 通常起動時
-boot → instastructure → main
+`multi-project-boot` → `multi-project-infrastructure` → `multi-project-main`
 
 ## テスト実行時
-### infrastructureモジュール
+### `multi-project-infrastructure`モジュール
 特になし
 
-### mainモジュール
-main → infrastructure
+### `multi-project-main`モジュール
+`multi-project-main` → `multi-project-infrastructure`
 
 # 苦しんだポイント
 以前かなり凝った構成で試した際にeclipseだけビルドが通らなかったため、モジュール数やモジュール間の依存関係を最小にしたが、今回もテストのみの依存性であっても循環参照エラーが発生。
+
 Gradleの依存性設定ではどうやっても解消することができなかったため、eclipseタスクにてエラーレベルをワーニングに変更することで回避したが、この調査だけで1週間くらい使った。
 
 # 参考
