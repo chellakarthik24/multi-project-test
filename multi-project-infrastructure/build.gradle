@@ -68,6 +68,7 @@ eclipse {
         file {
             withProperties {properties ->
                 properties.setProperty('org.eclipse.jdt.core.compiler.processAnnotations', 'enabled')
+                properties.setProperty('org.eclipse.jdt.core.circularClasspath', 'warning')
             }
         }
     }
